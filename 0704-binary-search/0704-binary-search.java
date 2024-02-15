@@ -5,7 +5,7 @@ class Solution {
             m = (h+l)/2;
             if(nums[m]==target){
                 
-                break;
+                return m;
             }
             else if(nums[m]>target){
                 h=m-1;
@@ -14,11 +14,9 @@ class Solution {
                 l=m+1;
             }
         }
-        if(nums[m]!=target){
+        
             return -1;
-        }else{
-            return m;
-        }
+        
         
     }
 }
