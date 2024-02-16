@@ -11,16 +11,12 @@ class Solution {
         int m = (a-b)/2;
         for(int i=0;i<aliceSizes.length;i++){
             for(int j=0;j<bobSizes.length;j++){
-                if(m > 0 && aliceSizes[i]-bobSizes[j] == m){
+                if((m > 0 && aliceSizes[i]-bobSizes[j] == m) || (m<0 && bobSizes[j]-aliceSizes[i] == Math.abs(m))){
                     ans[0]=aliceSizes[i];
                     ans[1]=bobSizes[j];
                    return ans;
                 } 
-                else if(m<0 && bobSizes[j]-aliceSizes[i] == Math.abs(m)){
-                    ans[0]=aliceSizes[i];
-                    ans[1]=bobSizes[j];
-                    return ans;
-                }
+              
             }
         }
         return ans;
