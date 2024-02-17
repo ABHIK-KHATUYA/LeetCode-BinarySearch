@@ -13,6 +13,6 @@ class Solution {
                 i++;
             }
         }
-        return j+(k-c+1);
+        return j+k-c+1;
     }
 }
